@@ -20,13 +20,15 @@ SET time_zone = "+00:00";
 -- Database: `portal_noticias`
 --
 
+CREATE DATABASE portal_noticias CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `noticias`
 --
 
-CREATE TABLE `noticias` (
+CREATE TABLE `portal_noticias`.`noticias` (
   `id_noticia` int(11) NOT NULL,
   `titulo` varchar(100) DEFAULT NULL,
   `noticia` text,
@@ -36,7 +38,7 @@ CREATE TABLE `noticias` (
 --
 -- Dumping data for table `noticias`
 --
-
+USE portal_noticias;
 INSERT INTO `noticias` (`id_noticia`, `titulo`, `noticia`, `data_criacao`) VALUES
 (1, 'titulo da noticia', 'conteudo da noticia', '2018-08-27 19:27:15'),
 (2, 'segunda noticia', 'conteudo da segunda noticia', '2018-08-30 12:34:27'),
@@ -50,6 +52,7 @@ INSERT INTO `noticias` (`id_noticia`, `titulo`, `noticia`, `data_criacao`) VALUE
 --
 -- Indexes for table `noticias`
 --
+USE portal_noticias;
 ALTER TABLE `noticias`
   ADD PRIMARY KEY (`id_noticia`);
 
@@ -60,6 +63,7 @@ ALTER TABLE `noticias`
 --
 -- AUTO_INCREMENT for table `noticias`
 --
+USE portal_noticias;
 ALTER TABLE `noticias`
   MODIFY `id_noticia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
